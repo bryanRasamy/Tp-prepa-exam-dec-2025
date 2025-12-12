@@ -1,0 +1,38 @@
+ETU003962-ETU004018
+
+TABLE SQL: (Bryan)
+	-Table chauffeur(id_chauffeur,nom_chauffeur); ok
+	-Table vehicule(id_vehicule,nom_vehicule,immatriculation); ok
+	-Table trajet(id_trajet,nom_trajet,date_debut_trajet,date_fin_trajet,montant_recette,montant_carburant); ok
+	-Table histo_trajet_jour(id_histo,id_vehicule,id_chauffeur,km_effectue,montant_recette,montant_carburant,date_histo); ok
+	-Table panne(id_panne,id_vehicule,date_panne);
+	-
+	 
+
+PAGE:
+	-copier tous les fichiers et dossier dans public et les coller au niveau du dossier public;
+
+	-config.php:
+		-Changer la base url en '/ETU004018/Tp_prepa_exam_dec_2025;
+		-Changer les parametres de connexion a la base de donnee;
+		
+	-accueil.php: (bryan)
+		-base: none
+			
+		-fonctions: none
+
+		-design:
+			-Sous forme de card:
+				-Bouton Liste par jour des véhicules et son chauffeur;
+				-Bouton Total Benefice par vehicule;
+				-Bouton Total Benefice par jour;
+				-Bouton Trajet les plus rentables par jour;
+				-Bouton Panne;
+				-Bouton gestion de salaire;
+
+		-integration: none
+
+	
+
+
+			
