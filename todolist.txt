@@ -22,33 +22,33 @@ PAGE:
 
 		-(ok) design:
 			-Sous forme de card:
-				-Bouton (game) Liste par jour des véhicules et son chauffeur; ok
-				-Bouton Total Benefice par vehicule; ok
-				-Bouton Total Benefice par jour (vers benefparjour.php); ok
-				-Bouton Trajet les plus rentables par jour; ok
-				-Bouton Panne; ok
-				-Bouton gestion de salaire; ok
+				-(ok) Bouton (game) Liste par jour des véhicules et son chauffeur; 
+				-(ok) Bouton Total Benefice par vehicule; 
+				-(ok) Bouton Total Benefice par jour (vers benefparjour.php);
+				-(ok) Bouton Trajet les plus rentables par jour; 
+				-(ok) Bouton Panne; 
+				-(ok) Bouton gestion de salaire;
 
 		-integration: none
 
 	
 	-benefparjour.php:
 		-base:
-			-Table histo_trajet_jour; ok
+			-(ok) Table histo_trajet_jour; 
 			
 		-fonction:
-			-getbeneficeparjour(); ok
+			-(ok) getbeneficeparjour(); 
 			
 		-design:
-			-mettre dans un tableau la liste des benefices ok
+			-(ok) mettre dans un tableau la liste des benefices 
 			
 		intagertioa:
-			-rendre la liste dynamique; ok
+			-(ok) rendre la liste dynamique; 
 			
 			
 	-trajetrentableparjour.php:
 		-base:
-			-Vue v_trajet_le_plus_rentable; ok
+			-(ok) Vue v_trajet_le_plus_rentable; 
 			
 		-fonction:
 			-gettrajetrentableparjour();
@@ -58,5 +58,16 @@ PAGE:
 			
 		intagertioa:
 			-rendre la liste dynamique; 
+
+		
+	-listevehicules.php: 
+		-base:
+
+		-fonction:
+
+		-design:
+
+		integration:
+
 
 			
