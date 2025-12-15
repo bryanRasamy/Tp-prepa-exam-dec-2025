@@ -124,5 +124,5 @@ INSERT INTO cooperative_histo_trajet_jour (id_trajet, id_vehicule, id_chauffeur,
 select date_trajet_jr,(SUM(montant_recette)-SUM(montant_carburant)) as benef from cooperative_histo_trajet_jour group by date_trajet_jr order by date_trajet_jr desc;
 CREATE VIEW v_montant_max_trajet_jr AS SELECT date_trajet_jr,MAX(montant_recette-montant_carburant) as benefice_max from cooperative_histo_trajet_jour GROUP BY date_trajet_jr;
 CREATE VIEW v_trajet_le_plus_rentable AS SELECT id_histo,c1.date_trajet_jr as date_trajet_jr,id_trajet,id_vehicule,id_chauffeur,kw_effectue,(montant_recette-montant_carburant) as benefice from cooperative_histo_trajet_jour c1 JOIN v_montant_max_trajet_jr ON c1.date_trajet_jr=v_montant_max_trajet_jr.date_trajet_jr AND (c1.montant_recette - c1.montant_carburant)=v_montant_max_trajet_jr.benefice_max order by date_trajet_jr;
-
+CREATE VIEW v_trajet_le_plus_rentable_avec_info AS SELECT v_trajet_le_plus_rentable.*,nom_trajet FROM v_trajet_le_plus_rentable JOIN cooperative_trajet ON v_trajet_le_plus_rentable.id_trajet=cooperative_trajet.id_trajet;
 
