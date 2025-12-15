@@ -4,7 +4,7 @@ TABLE SQL: (Bryan)
 	-(ok) Table chauffeur(id_chauffeur,nom_chauffeur); 
 	-(ok) Table vehicule(id_vehicule,nom_vehicule,immatriculation);
 	-(ok) Table trajet(id_trajet,nom_trajet,date_debut_trajet,date_fin_trajet,montant_recette,montant_carburant);
-	-Table histo_trajet_jour(id_histo,id_vehicule,id_chauffeur,km_effectue,montant_recette,montant_carburant,date_histo); ok
+	-(ok) Table histo_trajet_jour(id_histo,id_vehicule,id_chauffeur,km_effectue,montant_recette,montant_carburant,date_histo); ok
 	-Table panne(id_panne,id_vehicule,date_panne);
 	 
 
@@ -15,14 +15,14 @@ PAGE:
 		-Changer la base url en '/ETU004018/Tp_prepa_exam_dec_2025;
 		-Changer les parametres de connexion a la base de donnee;
 		
-	-accueil.php: (bryan)
+	-(ok) accueil.php: (bryan)
 		-base: none
 			
 		-fonctions: none
 
 		-(ok) design:
-			-Sous forme de card:
-				-(ok) Bouton (game) Liste par jour des véhicules et son chauffeur; 
+			-(ok) Sous forme de card:
+				-(ok) Bouton Liste par jour des véhicules et son chauffeur; 
 				-(ok) Bouton Total Benefice par vehicule; 
 				-(ok) Bouton Total Benefice par jour (vers benefparjour.php);
 				-(ok) Bouton Trajet les plus rentables par jour; 
@@ -31,8 +31,16 @@ PAGE:
 
 		-integration: none
 
-	
-	-benefparjour.php:
+	-listevehicules.php: (hasina)
+		-base:
+
+		-fonction:
+
+		-design:
+
+		integration:
+
+	-(ok) benefparjour.php: (bryan)
 		-base:
 			-(ok) Table histo_trajet_jour; 
 			
@@ -46,28 +54,31 @@ PAGE:
 			-(ok) rendre la liste dynamique; 
 			
 			
-	-trajetrentableparjour.php:
-		-base:
+	-(ok) trajetrentableparjour.php: (bryan)
+		-(ok) base:
 			-(ok) Vue v_trajet_le_plus_rentable; 
 			
-		-fonction:
-			-gettrajetrentableparjour();
+		-(ok) fonction:
+			-(ok) gettrajetrentableparjour();
 			
-		-design:
-			-mettre dans un tableau la liste des trajets rentables; 
+		-(ok) design:
+			-(ok) mettre dans un tableau la liste des trajets rentables; 
 			
-		intagertioa:
+		-(ok) integration:
 			-rendre la liste dynamique; 
 
-		
-	-listevehicules.php: 
-		-base:
+	-gestionsalaire.php: (bryan)
+		-base: none
 
-		-fonction:
+		-fonction: none
 
 		-design:
+			-Sous forme de card:
+				-Bouton insertion du montant de versement minimum; 
+				-Bouton Salaire journalier de chaque chauffeur; 
 
-		integration:
+		-integration: none
+	
 
 
 			
