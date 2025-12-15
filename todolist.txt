@@ -34,15 +34,29 @@ PAGE:
 	
 	-benefparjour.php:
 		-base:
-			-Table_histo_trajet_jour;
+			-Table histo_trajet_jour; ok
 			
 		-fonction:
-			-getbeneficeparjour();
+			-getbeneficeparjour(); ok
 			
 		-design:
 			-mettre dans un tableau la liste des benefices ok
 			
 		intagertioa:
-			-rendre la lise;
+			-rendre la liste dynamique; ok
+			
+			
+	-trajetrentableparjour.php:
+		-base:
+			-Vue v_trajet_le_plus_rentable; ok
+			
+		-fonction:
+			-gettrajetrentableparjour();
+			
+		-design:
+			-mettre dans un tableau la liste des trajets rentables; 
+			
+		intagertioa:
+			-rendre la liste dynamique; 
 
 			
