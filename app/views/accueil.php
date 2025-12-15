@@ -59,7 +59,7 @@
 
                 <section class="col-12 col-md-6 col-lg-3">
                     <article class="card h-100 shadow-sm border-0 text-center">
-                        <a href="" class="text-decoration-none text-dark">
+                        <a href="/trajet/rentable/jour" class="text-decoration-none text-dark">
                             <section class="card-body p-4">
                                 <i class="bi bi-clipboard2-check-fill text-warning display-1 mb-3"></i>
                                 <h2 class="card-title h4 fw-bold mb-3">Trajets les plus rentables</h2>

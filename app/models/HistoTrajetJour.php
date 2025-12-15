@@ -16,7 +16,13 @@
 
             return $stmt->fetchAll();
         }
-        
+
+        public function gettrajetleplusrentable(){
+            $stmt=$this->db->query("SELECT * FROM v_trajet_le_plus_rentable_avec_info ORDER BY date_trajet_jr ASC");
+
+            return $stmt->fetchAll();
+        }
+
         // public function getProduit($id){
         //     $stmt=$this->db->prepare("SELECT * FROM produits WHERE id=?");
         //     $stmt->execute([$id]);

@@ -26,6 +26,16 @@ class TrajetController {
 		Flight::render('benefparjour',['benefparjour'=>$benefparjour]);
 	}
 
+	public function gettrajetleplusrentable() {
+		// You could actually pull data from the database if you had one set up
+		// $users = $this->app->db()->fetchAll("SELECT * FROM users");
+		
+		$histoTrajetJour=new HistoTrajetJour($this->app->db());
+		$trajetrentable=$histoTrajetJour->gettrajetleplusrentable();
+		
+		Flight::render('trajetrentableparjour',['trajetrentable'=>$trajetrentable]);
+	}
+
 	// public function getProduit($id) {
 	// 	// You could actually pull data from the database if you had one set up
 	// 	// $users = $this->app->db()->fetchAll("SELECT * FROM users");

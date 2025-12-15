@@ -19,6 +19,8 @@ $router->group('', function(Router $router) use ($app) {
 
 	$router->get('/benef/jour', [$controller,'getbeneficeparjour']);
 
+	$router->get('/trajet/rentable/jour', [$controller,'gettrajetleplusrentable']);
+
 	// $router->get('/ajout',function(){
 	// 	Flight::render('ajout');
 	// });
