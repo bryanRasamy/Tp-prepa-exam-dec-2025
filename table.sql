@@ -120,3 +120,6 @@ INSERT INTO cooperative_histo_trajet_jour (id_trajet, id_vehicule, id_chauffeur,
 (14, 14, 13, 175.00, 310000.00, 56000.00, '2025-01-23'),
 (15, 15, 14, 85.00, 230000.00, 42000.00, '2025-01-16'),
 (15, 15, 15, 85.00, 225000.00, 39000.00, '2025-01-23');
+
+select date_trajet_jr,(SUM(montant_recette)-SUM(montant_carburant)) as benef from cooperative_histo_trajet_jour group by date_trajet_jr order by date_trajet_jr desc;
+
