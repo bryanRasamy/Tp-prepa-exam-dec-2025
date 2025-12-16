@@ -21,8 +21,8 @@ $router->group('', function(Router $router) use ($app) {
 
 	$router->get('/trajet/rentable/jour', [$controller,'gettrajetleplusrentable']);
 
-	$router->get('/Gestionsalaire',function(){
-		Flight::render('gestionsalaire');
+	$router->get('/gestionsalaire',function(){
+		Flight::render('gestionnairesalaire');
 	});
 
 	// $router->get('/ajout',function(){

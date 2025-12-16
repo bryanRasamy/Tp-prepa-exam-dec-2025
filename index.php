@@ -1,5 +1,5 @@
 <?php
-
+ini_set('display_errors',1);
 /*
  * FlightPHP Framework
  * @copyright   Copyright (c) 2024, Mike Cao <mike@mikecao.com>, n0nag0n <n0nag0n@sky-9.com>
@@ -25,4 +25,4 @@
    by Dick Williams, rjw1@tyrell.net
 */
 $ds = DIRECTORY_SEPARATOR;
-require(__DIR__. $ds . '..' . $ds . 'app' . $ds . 'config' . $ds . 'bootstrap.php');
+require(__DIR__. $ds  . $ds . 'app' . $ds . 'config' . $ds . 'bootstrap.php');

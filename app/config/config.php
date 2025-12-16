@@ -46,8 +46,8 @@ if (empty($app) === true) {
 $app->path(__DIR__ . $ds . '..' . $ds . '..');
 
 // Core config variables
-$app->set('flight.base_url', '/',);
-// $app->set('flight.base_url', '/ETU004018/tp-prepa-exam-dec-2025',);           // Base URL for your app. Change if app is in a subdirectory (e.g., '/myapp/')
+// $app->set('flight.base_url', '/',);
+define('BASE_URL', rtrim(dirname($_SERVER['SCRIPT_NAME']), '/'));          // Base URL for your app. Change if app is in a subdirectory (e.g., '/myapp/')
 $app->set('flight.case_sensitive', false);    // Set true for case sensitive routes. Default: false
 $app->set('flight.log_errors', true);         // Log errors to file. Recommended: true in production
 $app->set('flight.handle_errors', false);     // Let Tracy handle errors if false. Set true to use Flight's error handler
@@ -66,27 +66,27 @@ return [
 	/**************************************
 	 *         Database Settings          *
 	 **************************************/
-	'database' => [
-		// MySQL Example:
-		'host'     => 'localhost:3306',      // Database host (e.g., 'localhost', 'db.example.com')
-		'dbname'   => 'cooperative',   // Database name (e.g., 'flightphp')
-		'user'     => 'root',  // Database user (e.g., 'root')
-		'password' => '',  // Database password (never commit real passwords)
-
-		// SQLite Example:
-		// 'file_path' => __DIR__ . $ds . '..' . $ds . 'database.sqlite', // Path to SQLite file
-	],
-
 	// 'database' => [
 	// 	// MySQL Example:
-	// 	'host'     => 'localhost',      // Database host (e.g., 'localhost', 'db.example.com')
-	// 	'dbname'   => 'db_s2_ETU004018',   // Database name (e.g., 'flightphp')
-	// 	'user'     => 'ETU004018',  // Database user (e.g., 'root')
-	// 	'password' => 'viSz7oYt',  // Database password (never commit real passwords)
+	// 	'host'     => 'localhost:3306',      // Database host (e.g., 'localhost', 'db.example.com')
+	// 	'dbname'   => 'cooperative',   // Database name (e.g., 'flightphp')
+	// 	'user'     => 'root',  // Database user (e.g., 'root')
+	// 	'password' => '',  // Database password (never commit real passwords)
 
 	// 	// SQLite Example:
 	// 	// 'file_path' => __DIR__ . $ds . '..' . $ds . 'database.sqlite', // Path to SQLite file
 	// ],
+
+	'database' => [
+		// MySQL Example:
+		'host'     => 'localhost',      // Database host (e.g., 'localhost', 'db.example.com')
+		'dbname'   => 'db_s2_ETU004018',   // Database name (e.g., 'flightphp')
+		'user'     => 'ETU004018',  // Database user (e.g., 'root')
+		'password' => 'viSz7oYt',  // Database password (never commit real passwords)
+
+		// SQLite Example:
+		// 'file_path' => __DIR__ . $ds . '..' . $ds . 'database.sqlite', // Path to SQLite file
+	],
 
 	// Google OAuth Credentials
 	// 'google_oauth' => [
